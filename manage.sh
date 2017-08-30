@@ -176,7 +176,7 @@ stop_container () {
     echo "The container: ${DOCKER_CONTAINER_NAME} is stopped!"
 
     # Remove container
-    ${DOCKER_BINARY} rm ${DOCKER_CONTAINER_NAME}
+    ${DOCKER_BINARY} rm -v ${DOCKER_CONTAINER_NAME}
     RETURN_CODE=$?
     if [[ ${RETURN_CODE} -eq 0 ]]; then
       echo "Successfully remove container: ${DOCKER_CONTAINER_NAME}!"
